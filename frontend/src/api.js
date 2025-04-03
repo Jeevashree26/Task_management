@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://task-management-krsf.vercel.app";
 
 export const registerUser = (userData) => axios.post(`${API_URL}/register`, userData);
 
