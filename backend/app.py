@@ -9,6 +9,13 @@ from flask_cors import CORS
 uri = "mongodb+srv://Jeevashree:12345@task1.mbwh52m.mongodb.net/"
 app = Flask(__name__)
 client = pymongo.MongoClient(uri)
+try:
+    client.admin.command("ping")
+    print("✅ MongoDB Connection Successful")
+except Exception as e:
+    print("❌ MongoDB Connection Failed:", e)
+
+
 db = client["task1"]
 app.config['JWT_SECRET_KEY'] = '8c3f24e76136444095078d39cd573727'
 jwt=JWTManager(app)
