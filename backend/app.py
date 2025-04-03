@@ -6,7 +6,7 @@ import os
 from bson import ObjectId
 from flask_cors import CORS
 
-uri = "mongodb+srv://Jeevashree:12345@task1.mbwh52m.mongodb.net/"
+uri = "mongodb+srv://Jeevashree:<db_password>@task1.mbwh52m.mongodb.net/?retryWrites=true&w=majority&appName=task1"
 app = Flask(__name__)
 client = pymongo.MongoClient(uri)
 try:
